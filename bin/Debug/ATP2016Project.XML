@@ -1,0 +1,1369 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ATP2016Project</name>
+    </assembly>
+    <members>
+        <member name="T:ATP2016Project.Controller.ACommand">
+            <summary>
+            /Abstract class representing a command
+            </summary>
+        </member>
+        <member name="M:ATP2016Project.Controller.ACommand.#ctor(ATP2016Project.Model.IModel,ATP2016Project.View.IView)">
+            <summary>
+            ACommand Constructor
+            </summary>
+            <param name="model">model</param>
+            <param name="view">view</param>
+        </member>
+        <member name="M:ATP2016Project.Controller.ACommand.DoCommand(System.String[])">
+            <summary>
+            DoCommand - asks the model to get the dir info and sends it to the view for print
+            </summary>
+            <param name="parameters">dir path</param>
+        </member>
+        <member name="M:ATP2016Project.Controller.ACommand.GetName">
+            <summary>
+            GetName
+            </summary>
+            <returns>string name of command</returns>
+        </member>
+        <member name="M:ATP2016Project.Controller.ACommand.getInfo">
+            <summary>
+            Returns important info about the command
+            </summary>
+            <returns>string info</returns>
+        </member>
+        <member name="T:ATP2016Project.Controller.DirCommand">
+            <summary>
+            Dir Commands - returns the names of the files and folders in a given path
+            </summary>
+        </member>
+        <member name="M:ATP2016Project.Controller.DirCommand.#ctor(ATP2016Project.Model.IModel,ATP2016Project.View.IView)">
+            <summary>
+            Dir Command Constructor
+            </summary>
+            <param name="model">model</param>
+            <param name="view">view</param>
+        </member>
+        <member name="M:ATP2016Project.Controller.DirCommand.DoCommand(System.String[])">
+            <summary>
+            DoCommand - asks the model to get the dir info and sends it to the view for print
+            </summary>
+            <param name="parameters">dir path</param>
+        </member>
+        <member name="M:ATP2016Project.Controller.DirCommand.getInfo">
+            <summary>
+            Returns important info about the command
+            </summary>
+            <returns>string info</returns>
+        </member>
+        <member name="M:ATP2016Project.Controller.DirCommand.GetName">
+            <summary>
+            GetName
+            </summary>
+            <returns>string name of command</returns>
+        </member>
+        <member name="T:ATP2016Project.Controller.DisplayCommand">
+            <summary>
+            Display Command - prints a maze
+            </summary>
+        </member>
+        <member name="M:ATP2016Project.Controller.DisplayCommand.#ctor(ATP2016Project.Model.IModel,ATP2016Project.View.IView)">
+            <summary>
+            DisplayCommand constructor
+            </summary>
+            <param name="model">model</param>
+            <param name="view">view</param>
+        </member>
+        <member name="M:ATP2016Project.Controller.DisplayCommand.DoCommand(System.String[])">
+            <summary>
+            DoCommand - performs the display command
+            </summary>
+            <param name="parameters">maze name</param>
+        </member>
+        <member name="M:ATP2016Project.Controller.DisplayCommand.getInfo">
+            <summary>
+            Returns important info about the command
+            </summary>
+            <returns>string info</returns>
+        </member>
+        <member name="M:ATP2016Project.Controller.DisplayCommand.GetName">
+            <summary>
+            GetName
+            </summary>
+            <returns>string name of command</returns>
+        </member>
+        <member name="T:ATP2016Project.Controller.DisplaySolutionCommand">
+            <summary>
+            DisplaySolution Command - prints a solution for a maze
+            </summary>
+        </member>
+        <member name="M:ATP2016Project.Controller.DisplaySolutionCommand.#ctor(ATP2016Project.Model.IModel,ATP2016Project.View.IView)">
+            <summary>
+            DisplaySolutionCommand constructor
+            </summary>
+            <param name="model">model</param>
+            <param name="view">view</param>
+        </member>
+        <member name="M:ATP2016Project.Controller.DisplaySolutionCommand.DoCommand(System.String[])">
+            <summary>
+            DoCommand - performs the display solution command
+            </summary>
+            <param name="parameters">maze name</param>
+        </member>
+        <member name="M:ATP2016Project.Controller.DisplaySolutionCommand.getInfo">
+            <summary>
+            Returns important info about the command
+            </summary>
+            <returns>string info</returns>
+        </member>
+        <member name="M:ATP2016Project.Controller.DisplaySolutionCommand.GetName">
+            <summary>
+            GetName
+            </summary>
+            <returns>string name of command</returns>
+        </member>
+        <member name="T:ATP2016Project.Controller.ExitCommand">
+            <summary>
+            Exits the program
+            </summary>
+        </member>
+        <member name="M:ATP2016Project.Controller.ExitCommand.#ctor(ATP2016Project.Model.IModel,ATP2016Project.View.IView)">
+            <summary>
+            Exit command constructor
+            </summary>
+            <param name="model">model</param>
+            <param name="view">view</param>
+        </member>
+        <member name="M:ATP2016Project.Controller.ExitCommand.DoCommand(System.String[])">
+            <summary>
+            DoCommand - make sure all the running threads end and exits the program
+            </summary>
+            <param name="parameters">no parameters should be given</param>
+        </member>
+        <member name="M:ATP2016Project.Controller.ExitCommand.getInfo">
+            <summary>
+            Returns important info about the command
+            </summary>
+            <returns>string info</returns>
+        </member>
+        <member name="M:ATP2016Project.Controller.ExitCommand.GetName">
+            <summary>
+            GetName
+            </summary>
+            <returns>string name of command</returns>
+        </member>
+        <member name="T:ATP2016Project.Controller.FileSizeCommand">
+            <summary>
+            File Size Command - prints the size of a file in a given path
+            </summary>
+        </member>
+        <member name="M:ATP2016Project.Controller.FileSizeCommand.#ctor(ATP2016Project.Model.IModel,ATP2016Project.View.IView)">
+            <summary>
+            File Size Command Constructor
+            </summary>
+            <param name="model">model</param>
+            <param name="view">view</param>
+        </member>
+        <member name="M:ATP2016Project.Controller.FileSizeCommand.DoCommand(System.String[])">
+            <summary>
+            DoCommand - prints the size in bytes of a given file
+            </summary>
+            <param name="parameters">file path</param>
+        </member>
+        <member name="M:ATP2016Project.Controller.FileSizeCommand.getInfo">
+            <summary>
+            Returns important info about the command
+            </summary>
+            <returns>string info</returns>
+        </member>
+        <member name="M:ATP2016Project.Controller.FileSizeCommand.GetName">
+            <summary>
+            GetName
+            </summary>
+            <returns>string name of command</returns>
+        </member>
+        <member name="T:ATP2016Project.Controller.Generate3DMazeCommand">
+            <summary>
+            Generates a 3 Dimensional maze
+            </summary>
+        </member>
+        <member name="M:ATP2016Project.Controller.Generate3DMazeCommand.#ctor(ATP2016Project.Model.IModel,ATP2016Project.View.IView)">
+            <summary>
+            Generate3DMaze Command Constructor
+            </summary>
+            <param name="model">model</param>
+            <param name="view">view</param>
+        </member>
+        <member name="M:ATP2016Project.Controller.Generate3DMazeCommand.DoCommand(System.String[])">
+            <summary>
+            DoCommand - Generates a maze with given dimensions
+            </summary>
+            <param name="parameters">[0] maze name [1] columns [2] rows [3] floors</param>
+        </member>
+        <member name="M:ATP2016Project.Controller.Generate3DMazeCommand.getInfo">
+            <summary>
+            Returns important info about the command
+            </summary>
+            <returns>string info</returns>
+        </member>
+        <member name="M:ATP2016Project.Controller.Generate3DMazeCommand.GetName">
+            <summary>
+            GetName
+            </summary>
+            <returns>string name of command</returns>
+        </member>
+        <member name="T:ATP2016Project.Controller.ICommand">
+            <summary>
+            An Interfact representing a command
+            </summary>
+        </member>
+        <member name="M:ATP2016Project.Controller.ICommand.DoCommand(System.String[])">
+            <summary>
+            DoCommand - asks the model to get the dir info and sends it to the view for print
+            </summary>
+            <param name="parameters">dir path</param>
+        </member>
+        <member name="M:ATP2016Project.Controller.ICommand.GetName">
+            <summary>
+            GetName
+            </summary>
+            <returns>string name of command</returns>
+        </member>
+        <member name="M:ATP2016Project.Controller.ICommand.getInfo">
+            <summary>
+            Returns important info about the command
+            </summary>
+            <returns>string info</returns>
+        </member>
+        <member name="T:ATP2016Project.Controller.IController">
+            <summary>
+            An Interface representing a controller
+            </summary>
+        </member>
+        <member name="M:ATP2016Project.Controller.IController.SetModel(ATP2016Project.Model.IModel)">
+            <summary>
+            Set Model - sets a model for the controller
+            </summary>
+            <param name="model">model</param>
+        </member>
+        <member name="M:ATP2016Project.Controller.IController.SetView(ATP2016Project.View.IView)">
+            <summary>
+            Set View - sets a view for the controller
+            </summary>
+            <param name="view">view</param>
+        </member>
+        <member name="M:ATP2016Project.Controller.IController.Output(System.String)">
+            <summary>
+            Output - sending a given output to the view
+            </summary>
+            <param name="output">string output</param>
+        </member>
+        <member name="M:ATP2016Project.Controller.IController.errOutput(System.String)">
+            <summary>
+            errOutput - sending a given error output to the view
+            </summary>
+            <param name="output">string output</param>
+        </member>
+        <member name="M:ATP2016Project.Controller.IController.GetCommands">
+            <summary>
+            GetCommands
+            </summary>
+            <returns>a dictionary containing the commands avilable for the controller</returns>
+        </member>
+        <member name="T:ATP2016Project.Controller.LoadMazeCommand">
+            <summary>
+            Load Maze Command - Loads a compressed maze from a file
+            </summary>
+        </member>
+        <member name="M:ATP2016Project.Controller.LoadMazeCommand.#ctor(ATP2016Project.Model.IModel,ATP2016Project.View.IView)">
+            <summary>
+            Load Maze Command Constructor
+            </summary>
+            <param name="model">model</param>
+            <param name="view">view</param>
+        </member>
+        <member name="M:ATP2016Project.Controller.LoadMazeCommand.DoCommand(System.String[])">
+            <summary>
+            Load Maze Command - loads a compressed maze from a file
+            </summary>
+            <param name="parameters">[0] file path [1] maze name</param>
+        </member>
+        <member name="M:ATP2016Project.Controller.LoadMazeCommand.getInfo">
+            <summary>
+            Returns important info about the command
+            </summary>
+            <returns>string info</returns>
+        </member>
+        <member name="M:ATP2016Project.Controller.LoadMazeCommand.GetName">
+            <summary>
+            GetName
+            </summary>
+            <returns>string name of command</returns>
+        </member>
+        <member name="T:ATP2016Project.Controller.MazeSizeCommand">
+            <summary>
+            Maze SizeCommand - gets the size (in bytes) of a given maze
+            </summary>
+        </member>
+        <member name="M:ATP2016Project.Controller.MazeSizeCommand.#ctor(ATP2016Project.Model.IModel,ATP2016Project.View.IView)">
+            <summary>
+            Maze Size Command Constructor
+            </summary>
+            <param name="model">model</param>
+            <param name="view">view</param>
+        </member>
+        <member name="M:ATP2016Project.Controller.MazeSizeCommand.DoCommand(System.String[])">
+            <summary>
+            DoCommand - performs maze size command
+            </summary>
+            <param name="parameters">maze name</param>
+        </member>
+        <member name="M:ATP2016Project.Controller.MazeSizeCommand.getInfo">
+            <summary>
+            Returns important info about the command
+            </summary>
+            <returns>string info</returns>
+        </member>
+        <member name="M:ATP2016Project.Controller.MazeSizeCommand.GetName">
+            <summary>
+            GetName
+            </summary>
+            <returns>string name of command</returns>
+        </member>
+        <member name="T:ATP2016Project.Controller.MyController">
+            <summary>
+            The Controller
+            </summary>
+        </member>
+        <member name="M:ATP2016Project.Controller.MyController.#ctor">
+            <summary>
+            MyController Constructor
+            </summary>
+        </member>
+        <member name="M:ATP2016Project.Controller.MyController.SetModel(ATP2016Project.Model.IModel)">
+            <summary>
+            Set Model - sets a model for the controller
+            </summary>
+            <param name="model">model</param>
+        </member>
+        <member name="M:ATP2016Project.Controller.MyController.SetView(ATP2016Project.View.IView)">
+            <summary>
+            Set View - sets a view for the controller
+            </summary>
+            <param name="view">view</param>
+        </member>
+        <member name="M:ATP2016Project.Controller.MyController.createCommandDictionary">
+            <summary>
+            createCommandDictionary - initiates the commands dictionary
+            </summary>
+        </member>
+        <member name="M:ATP2016Project.Controller.MyController.GetCommands">
+            <summary>
+            GetCommands
+            </summary>
+            <returns>a dictionary containing the commands avilable for the controller</returns>
+        </member>
+        <member name="M:ATP2016Project.Controller.MyController.Output(System.String)">
+            <summary>
+            Output - sending a given output to the view
+            </summary>
+            <param name="output">string output</param>
+        </member>
+        <member name="M:ATP2016Project.Controller.MyController.errOutput(System.String)">
+            <summary>
+            errOutput - sending a given error output to the view
+            </summary>
+            <param name="output">string output</param>
+        </member>
+        <member name="T:ATP2016Project.Controller.SaveMazeCommand">
+            <summary>
+            Save Maze Command - Compresses and Saves a maze into a file
+            </summary>
+        </member>
+        <member name="M:ATP2016Project.Controller.SaveMazeCommand.#ctor(ATP2016Project.Model.IModel,ATP2016Project.View.IView)">
+            <summary>
+            Save Maze Command Constructor
+            </summary>
+            <param name="model">model</param>
+            <param name="view">view</param>
+        </member>
+        <member name="M:ATP2016Project.Controller.SaveMazeCommand.DoCommand(System.String[])">
+            <summary>
+            DoCommand - Compresses the requested maze and saves it into a file in the given path
+            </summary>
+            <param name="parameters">[0] maze name [1]file path</param>
+        </member>
+        <member name="M:ATP2016Project.Controller.SaveMazeCommand.getInfo">
+            <summary>
+            Returns important info about the command
+            </summary>
+            <returns>string info</returns>
+        </member>
+        <member name="M:ATP2016Project.Controller.SaveMazeCommand.GetName">
+            <summary>
+            GetName
+            </summary>
+            <returns>string name of command</returns>
+        </member>
+        <member name="M:ATP2016Project.Controller.SaveMazeCommand.pathExists(System.String)">
+            <summary>
+            pathExists - check if a given path is valid and accessable
+            </summary>
+            <param name="path">path for saving the maze</param>
+            <returns>True for existing path, false otherwise</returns>
+        </member>
+        <member name="T:ATP2016Project.Controller.SolveMazeCommand">
+            <summary>
+            Solve Maze Command
+            </summary>
+        </member>
+        <member name="M:ATP2016Project.Controller.SolveMazeCommand.#ctor(ATP2016Project.Model.IModel,ATP2016Project.View.IView)">
+            <summary>
+            Solve Maze Constructor
+            </summary>
+            <param name="model">model</param>
+            <param name="view">view</param>
+        </member>
+        <member name="M:ATP2016Project.Controller.SolveMazeCommand.DoCommand(System.String[])">
+            <summary>
+            Request the model to solve a given maze using a given search algorithm (BFS/DFS)
+            </summary>
+            <param name="parameters">[0] maze name [1] searching algorithm</param>
+        </member>
+        <member name="M:ATP2016Project.Controller.SolveMazeCommand.getInfo">
+            <summary>
+            Returns important info about the command
+            </summary>
+            <returns>string info</returns>
+        </member>
+        <member name="M:ATP2016Project.Controller.SolveMazeCommand.GetName">
+            <summary>
+            GetName
+            </summary>
+            <returns>string name of command</returns>
+        </member>
+        <member name="T:ATP2016Project.Model.Algorithms.Compression.ICompressor">
+            <summary>
+            An Interface represents and Compressor
+            </summary>
+        </member>
+        <member name="T:ATP2016Project.Model.Algorithms.Compression.MyCompressorStream">
+            <summary>
+            My Compressor Stream
+            </summary>
+        </member>
+        <member name="M:ATP2016Project.Model.Algorithms.Compression.MyCompressorStream.#ctor(System.IO.Stream)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="io">Stream - to be use for read and write</param>
+        </member>
+        <member name="M:ATP2016Project.Model.Algorithms.Compression.MyCompressorStream.Flush">
+            <summary>
+            Flush the stream
+            </summary>
+        </member>
+        <member name="M:ATP2016Project.Model.Algorithms.Compression.MyCompressorStream.Read(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Read compressed data from a file, decompress it and writes it into the buffer
+            </summary>
+            <param name="buffer">buffer for decompressed data</param>
+            <param name="offset">start to insert data into the 'buffer' from this position</param>
+            <param name="count">number of bytes to read</param>
+            <returns>number of bytes that actually readed </returns>
+        </member>
+        <member name="M:ATP2016Project.Model.Algorithms.Compression.MyCompressorStream.Write(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            compress the data from the 'buffer' and write it to thr current stream.
+            </summary>
+            <param name="buffer">array of bytes to read data from</param>
+            <param name="offset">start to read from the 'buffer' in this position</param>
+            <param name="count">number of bytes to read from the buffer</param>
+        </member>
+        <member name="M:ATP2016Project.Model.Algorithms.Compression.MyMaze3DCompressor.compress(System.Byte[])">
+            <summary>
+            Compress the array - naive compression
+            </summary>
+            <param name="data">bytes array to compress</param>
+            <returns>compressed bytes array</returns>
+        </member>
+        <member name="M:ATP2016Project.Model.Algorithms.Compression.MyMaze3DCompressor.decompress(System.Byte[])">
+            <summary>
+            decompress the array - naive compression
+            </summary>
+            <param name="data">compressed bytes array</param>
+            <returns>decompressed bytes array</returns>
+        </member>
+        <member name="T:ATP2016Project.Model.Algorithms.MazeGenerators.Position2D">
+            <summary>
+            Represents a 2 Dimensional Position (X,Y) Cords
+            </summary>
+        </member>
+        <member name="M:ATP2016Project.Model.Algorithms.MazeGenerators.Position2D.print">
+            <summary>
+            Prints the position ( x, y )
+            </summary>
+        </member>
+        <member name="M:ATP2016Project.Model.Algorithms.MazeGenerators.Position2D.setPosition(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Sets the position to a given coordinate
+            </summary>
+            <param name="row"></param>
+            <param name="col"></param>
+            <param name="level"></param>
+        </member>
+        <member name="T:ATP2016Project.Model.Algorithms.MazeGenerators.Position3D">
+            <summary>
+            Represents a 3 Dimensional Position (X,Y,Z) Cords
+            </summary>
+        </member>
+        <member name="M:ATP2016Project.Model.Algorithms.MazeGenerators.Position3D.#ctor(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="level"></param>
+            <param name="row"></param>
+            <param name="col"></param>
+        </member>
+        <member name="M:ATP2016Project.Model.Algorithms.MazeGenerators.Position3D.print">
+            <summary>
+            Prints the Position coordinates ( x, y, z )
+            </summary>
+        </member>
+        <member name="M:ATP2016Project.Model.Algorithms.MazeGenerators.Position3D.setPosition(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Sets the position to a given coordinate
+            </summary>
+            <param name="level"></param>
+            <param name="row"></param>
+            <param name="col"></param>
+        </member>
+        <member name="T:ATP2016Project.Model.Algorithms.MazeGenerators.APosition">
+            <summary>
+            represents a Generic Position
+            </summary>
+        </member>
+        <member name="M:ATP2016Project.Model.Algorithms.MazeGenerators.APosition.setPosition(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Sets a position to a specific values
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+            <param name="z"></param>
+        </member>
+        <member name="M:ATP2016Project.Model.Algorithms.MazeGenerators.APosition.print">
+            <summary>
+            print position
+            </summary>
+        </member>
+        <member name="M:ATP2016Project.Model.Algorithms.MazeGenerators.AMazeGenerator.generate(System.Int32[])">
+            <summary>
+            Generates a maze using boardSize for its dimensions
+            </summary>
+            <param name="boardSize">
+            boardSize[0] = Number of levels
+            boardSize[1] = Number of rows
+            boardSize[2] = Number of columns</param>
+            <returns></returns>
+        </member>
+        <member name="M:ATP2016Project.Model.Algorithms.MazeGenerators.AMazeGenerator.geasureAlgorithmTime(System.Int32[])">
+            <summary>
+            return the time is take to generate a maze
+            </summary>
+            <param name="boardSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ATP2016Project.Model.Algorithms.MazeGenerators.AMazeGenerator.generateRandomDirections(System.Int32)">
+            <summary>
+            generate a random array with numbers 1 to size 
+            </summary>
+            <param name="size"></param>
+            <returns> the array </returns>
+        </member>
+        <member name="T:ATP2016Project.Model.Algorithms.MazeGenerators.AMazeGenerator.Utils">
+            <summary>
+            helping class to the random function
+            </summary>
+        </member>
+        <member name="T:ATP2016Project.Model.Algorithms.MazeGenerators.IMaze">
+            <summary>
+            Maze interface
+            Defines the following functions:
+            Print the maze
+            get the start position of the maze
+            get the goal (end) position of a maze
+            </summary>
+        </member>
+        <member name="T:ATP2016Project.Model.Algorithms.MazeGenerators.IMazeGenerator">
+            <summary>
+            Interface for a maze generator
+            defines the following functions:
+            generate maze
+            geasureAlgorithmTime (generates a maze and returns the time it took)
+            </summary>
+        </member>
+        <member name="T:ATP2016Project.Model.Algorithms.MazeGenerators.AMaze">
+            <summary>
+            Represents a Generic Maze
+            </summary>
+        </member>
+        <member name="M:ATP2016Project.Model.Algorithms.MazeGenerators.AMaze.getStartPosition">
+            <summary>
+            returns the start position
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ATP2016Project.Model.Algorithms.MazeGenerators.AMaze.getGoalPosition">
+            <summary>
+            returns the goal position
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:ATP2016Project.Model.Algorithms.MazeGenerators.Maze2d">
+            <summary>
+            Represents a 2 Dimensional Maze
+            </summary>
+        </member>
+        <member name="M:ATP2016Project.Model.Algorithms.MazeGenerators.Maze2d.#ctor(System.Int32[0:,0:],ATP2016Project.Model.Algorithms.MazeGenerators.Position2D,ATP2016Project.Model.Algorithms.MazeGenerators.Position2D)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="maze"></param>
+            <param name="start"></param>
+            <param name="end"></param>
+        </member>
+        <member name="M:ATP2016Project.Model.Algorithms.MazeGenerators.Maze2d.getHeight">
+            <summary>
+            Returns the Height of the maze (Number of Rows)
+            </summary>
+            <returns> int </returns>
+        </member>
+        <member name="M:ATP2016Project.Model.Algorithms.MazeGenerators.Maze2d.getWidth">
+            <summary>
+            Returns the Width of the maze (Number of Columns)
+            </summary>
+            <returns> int </returns>
+        </member>
+        <member name="M:ATP2016Project.Model.Algorithms.MazeGenerators.Maze2d.print">
+            <summary>
+            Prints the Maze
+            </summary>
+        </member>
+        <member name="M:ATP2016Project.Model.Algorithms.MazeGenerators.Maze2d.getCell(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Gets the value of a specific cell
+            </summary>
+            <param name="y"></param>
+            <param name="x"></param>
+            <param name="z"></param>
+            <returns> int </returns>
+        </member>
+        <member name="T:ATP2016Project.Model.Algorithms.MazeGenerators.Maze3d">
+            <summary>
+            Represents a 3 Dimensional Maze
+            </summary>
+        </member>
+        <member name="M:ATP2016Project.Model.Algorithms.MazeGenerators.Maze3d.#ctor(System.Int32[0:,0:,0:],ATP2016Project.Model.Algorithms.MazeGenerators.Position3D,ATP2016Project.Model.Algorithms.MazeGenerators.Position3D)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="maze">maze board</param>
+            <param name="start">start position</param>
+            <param name="end">goal position</param>
+        </member>
+        <member name="M:ATP2016Project.Model.Algorithms.MazeGenerators.Maze3d.#ctor(System.Byte[])">
+            <summary>
+            constructor
+            </summary>
+            <param name="byteArray">array of bytes-represents a maze</param>
+        </member>
+        <member name="M:ATP2016Project.Model.Algorithms.MazeGenerators.Maze3d.print">
+            <summary>
+            Prints the Maze - Floor by Floor (Each floor is a printed as a 2D maze)
+            </summary>
+        </member>
+        <member name="M:ATP2016Project.Model.Algorithms.MazeGenerators.Maze3d.Equals(System.Object)">
+            <summary>
+            checks if an obj represents the same maze
+            </summary>
+            <param name="obj">object to compare</param>
+            <returns>true if the mazes equals, else- false</returns>
+        </member>
+        <member name="M:ATP2016Project.Model.Algorithms.MazeGenerators.Maze3d.getHeight">
+            <summary>
+            Returns the Height of the maze (Number of Rows)
+            </summary>
+            <returns> int </returns>
+        </member>
+        <member name="M:ATP2016Project.Model.Algorithms.MazeGenerators.Maze3d.getWidth">
+            <summary>
+            Returns the Width of the maze (Number of Columns)
+            </summary>
+            <returns> int </returns>
+        </member>
+        <member name="M:ATP2016Project.Model.Algorithms.MazeGenerators.Maze3d.getLevels">
+            <summary>
+            Returns the Number of levels of the maze
+            </summary>
+            <returns> int </returns>
+        </member>
+        <member name="M:ATP2016Project.Model.Algorithms.MazeGenerators.Maze3d.getCell(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Gets the value of a specific cell
+            </summary>
+            <param name="z">floor</param>
+            <param name="y">row</param>
+            <param name="x">column</param>
+            <returns> int </returns>
+        </member>
+        <member name="M:ATP2016Project.Model.Algorithms.MazeGenerators.Maze3d.isPath(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Checks if a specific cell is a path
+            </summary>
+            <param name="x">column</param>
+            <param name="y">row</param>
+            <param name="z">floor</param>
+            <returns> True for Path, False for wall</returns>
+        </member>
+        <member name="M:ATP2016Project.Model.Algorithms.MazeGenerators.Maze3d.toByteArray">
+            <summary>
+            Change the representation of 3D maze to array of bytes
+            </summary>
+            <returns>bytes array that representation 3d maze</returns>
+        </member>
+        <member name="M:ATP2016Project.Model.Algorithms.MazeGenerators.Maze3d.getMaze">
+            <summary>
+            get the 3d array
+            </summary>
+            <returns>3d array maze</returns>
+        </member>
+        <member name="T:ATP2016Project.Model.Algorithms.MazeGenerators.MyMaze3dGenerator">
+            <summary>
+            Generates a 3 Dimensional Maze (Using DFS Algorithm)
+            </summary>
+        </member>
+        <member name="M:ATP2016Project.Model.Algorithms.MazeGenerators.MyMaze3dGenerator.isValidPoint">
+            <summary>
+            Checks if the current point is a valid point for a path
+            </summary>
+            <returns>bool</returns>
+        </member>
+        <member name="M:ATP2016Project.Model.Algorithms.MazeGenerators.MyMaze3dGenerator.initiateMaze(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Initiating the board - walls only
+            </summary>
+            <param name="level"></param>
+            <param name="height"></param>
+            <param name="width"></param>
+        </member>
+        <member name="M:ATP2016Project.Model.Algorithms.MazeGenerators.MyMaze3dGenerator.generate(System.Int32[])">
+            <summary>
+            Generates a maze (size is determined by a list of dimensions given as argument)
+            </summary>
+            <param name="boardSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ATP2016Project.Model.Algorithms.MazeGenerators.MyMaze3dGenerator.goLeft">
+            <summary>
+            Tries to go Left from the current position
+            </summary>
+        </member>
+        <member name="M:ATP2016Project.Model.Algorithms.MazeGenerators.MyMaze3dGenerator.goRight">
+            <summary>
+            Tries to go Right from the current position
+            also takes care of lcoating the Goal Position of the maze
+            </summary>
+        </member>
+        <member name="M:ATP2016Project.Model.Algorithms.MazeGenerators.MyMaze3dGenerator.goUp">
+            <summary>
+            Tries going up from the current position
+            </summary>
+        </member>
+        <member name="M:ATP2016Project.Model.Algorithms.MazeGenerators.MyMaze3dGenerator.goDown">
+            <summary>
+            Tries going Down from the current position
+            </summary>
+        </member>
+        <member name="M:ATP2016Project.Model.Algorithms.MazeGenerators.MyMaze3dGenerator.Ascend">
+            <summary>
+            Tries Ascending (floor wise)
+            </summary>
+        </member>
+        <member name="M:ATP2016Project.Model.Algorithms.MazeGenerators.MyMaze3dGenerator.Descend">
+            <summary>
+            Tries Descending (floor wise)
+            </summary>
+        </member>
+        <member name="T:ATP2016Project.Model.Algorithms.MazeGenerators.SimpleMaze2dGenerator">
+            <summary>
+            Randomly generates a 2 Dimensional Maze
+            </summary>
+        </member>
+        <member name="M:ATP2016Project.Model.Algorithms.MazeGenerators.SimpleMaze2dGenerator.generateFrame">
+            <summary>
+            create the board frame
+            </summary>
+        </member>
+        <member name="M:ATP2016Project.Model.Algorithms.MazeGenerators.SimpleMaze2dGenerator.generatePath(System.Int32,System.Int32)">
+            <summary>
+            Recursive function that generate a path. if the currnt point is next to the farme set it as a end point and return. 
+            </summary>
+            <param name="currX"> the currnt X value </param>
+            <param name="currY"> the currnt Y value </param>
+        </member>
+        <member name="M:ATP2016Project.Model.Algorithms.MazeGenerators.SimpleMaze2dGenerator.generateWalls">
+            <summary>
+            For each cell that is not part of the path solution this function generates a wall in probability 0.6
+            </summary>
+        </member>
+        <member name="T:ATP2016Project.Model.Algorithms.Search.ASearchingAlgorithm">
+            <summary>
+            Represents a Generic Searching Algorithm
+            </summary>
+        </member>
+        <member name="M:ATP2016Project.Model.Algorithms.Search.ASearchingAlgorithm.Solve(ATP2016Project.Model.Algorithms.Search.ISearchable)">
+            <summary>
+            Solves the searchable
+            </summary>
+            <param name="searchable"></param>
+            <returns> Solution </returns>
+        </member>
+        <member name="M:ATP2016Project.Model.Algorithms.Search.ASearchingAlgorithm.getNumberOfNodesEvaluated">
+            <summary>
+            Returns the number of nodes evaluated
+            </summary>
+            <returns> m_countGeneratedNodes </returns>
+        </member>
+        <member name="M:ATP2016Project.Model.Algorithms.Search.ASearchingAlgorithm.GetSolvingTimeMiliseconds">
+            <summary>
+            Returns the solving time of the algorithm
+            </summary>
+            <returns> m_stopWatch.ElapsedTicks </returns>
+        </member>
+        <member name="M:ATP2016Project.Model.Algorithms.Search.ASearchingAlgorithm.clear">
+            <summary>
+            Clears the fiedls of the class to get it ready to solve a new problem
+            </summary>
+        </member>
+        <member name="T:ATP2016Project.Model.Algorithms.Search.AState">
+            <summary>
+            Represents a Generic state
+            </summary>
+        </member>
+        <member name="M:ATP2016Project.Model.Algorithms.Search.AState.#ctor(ATP2016Project.Model.Algorithms.Search.AState)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="parentState"></param>
+        </member>
+        <member name="M:ATP2016Project.Model.Algorithms.Search.AState.Equals(System.Object)">
+            <summary>
+            Checks if the states are equal
+            </summary>
+            <param name="obj"></param>
+            <returns> bool </returns>
+        </member>
+        <member name="M:ATP2016Project.Model.Algorithms.Search.AState.getParentState">
+            <summary>
+            Returns the parent state of the state
+            </summary>
+            <returns> AState </returns>
+        </member>
+        <member name="M:ATP2016Project.Model.Algorithms.Search.AState.getState">
+            <summary>
+            Returns the state as string
+            </summary>
+            <returns> string </returns>
+        </member>
+        <member name="M:ATP2016Project.Model.Algorithms.Search.AState.printState">
+            <summary>
+            Prints the state
+            </summary>
+        </member>
+        <member name="M:ATP2016Project.Model.Algorithms.Search.BFS.#ctor">
+            <summary>
+            This class solve searchable problems using Breadth-first search algorithm
+            </summary>
+        </member>
+        <member name="M:ATP2016Project.Model.Algorithms.Search.BFS.Solve(ATP2016Project.Model.Algorithms.Search.ISearchable)">
+            <summary>
+            Solves the Searchable- BFS algorithm: finds the path from initial state to goal state
+            </summary>
+            <param name="searchable">searchable problem to solve</param>
+            <returns>legal solution </returns>
+        </member>
+        <member name="T:ATP2016Project.Model.Algorithms.Search.DFS">
+            <summary>
+            This class solves a searchable using a Depth First Search algorithm
+            </summary>
+        </member>
+        <member name="M:ATP2016Project.Model.Algorithms.Search.DFS.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:ATP2016Project.Model.Algorithms.Search.DFS.Solve(ATP2016Project.Model.Algorithms.Search.ISearchable)">
+            <summary>
+            Solves the Searchable using DFS algorithm - Finds a path from the InitialState to the GoalState
+            </summary>
+            <param name="searchable"></param>
+            <returns> Solution </returns>
+        </member>
+        <member name="M:ATP2016Project.Model.Algorithms.Search.DFS.addToOpenList(System.Collections.Generic.List{ATP2016Project.Model.Algorithms.Search.AState})">
+            <summary>
+            Adds a List of AStates into the openList (Stack) if they dont exist in the closedList
+            </summary>
+            <param name="list"></param>
+        </member>
+        <member name="T:ATP2016Project.Model.Algorithms.Search.ISearchable">
+            <summary>
+            An Interface for a Searchable problem
+            Defines the following functions:
+            Get the searchables intial state
+            Get the searchables goal state
+            Get the list of possible successors of a state
+            Create a solution using the achieved goal state
+            Print
+            </summary>
+        </member>
+        <member name="T:ATP2016Project.Model.Algorithms.Search.ISearchingAlgorithm">
+            <summary>
+            Represents an Interface for a Searching Algorithm
+            Defines the following functions:
+            Solve - solves the given searchable and returns a solution
+            getNumberOfNodesEvaluated - returns the number of nodes the algorithm evaluated while solving
+            GetSolvingTimeMiliseconds - returns the time (in Miliseconds) it took the algorithm to solves the searchable
+            clear - resets the searching algorithm to a clean state - ready to solve a new searchable
+            </summary>
+        </member>
+        <member name="T:ATP2016Project.Model.Algorithms.Search.MazeState">
+            <summary>
+            Represents a specific state of the maze
+            </summary>
+        </member>
+        <member name="M:ATP2016Project.Model.Algorithms.Search.MazeState.#ctor(ATP2016Project.Model.Algorithms.Search.AState,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="parentState"></param>
+            <param name="pointX"></param>
+            <param name="pointY"></param>
+            <param name="pointZ"></param>
+        </member>
+        <member name="M:ATP2016Project.Model.Algorithms.Search.MazeState.getX">
+            <summary>
+            Gets the X Coordinate of the state ( X = Column )
+            </summary>
+            <returns> col </returns>
+        </member>
+        <member name="M:ATP2016Project.Model.Algorithms.Search.MazeState.getY">
+            <summary>
+            Gets the Y Coordinate of the state ( Y = Row )
+            </summary>
+            <returns> row </returns>
+        </member>
+        <member name="M:ATP2016Project.Model.Algorithms.Search.MazeState.getZ">
+            <summary>
+            Gets the Z Coordinate of the state ( Z = Level/Floor )
+            </summary>
+            <returns> level </returns>
+        </member>
+        <member name="T:ATP2016Project.Model.Algorithms.Search.SearchableMaze3D">
+            <summary>
+            An Object adapter converting a 3D maze into a searchable
+            </summary>
+        </member>
+        <member name="M:ATP2016Project.Model.Algorithms.Search.SearchableMaze3D.#ctor(ATP2016Project.Model.Algorithms.MazeGenerators.AMaze)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="maze3d"></param>
+        </member>
+        <member name="M:ATP2016Project.Model.Algorithms.Search.SearchableMaze3D.getInitialState">
+            <summary>
+            Returns the Initial State of the Maze
+            </summary>
+            <returns> AState (InitialState) </returns>
+        </member>
+        <member name="M:ATP2016Project.Model.Algorithms.Search.SearchableMaze3D.getGoalState">
+            <summary>
+            Returns the Goal State of the Maze
+            </summary>
+            <returns> AState (GoalState) </returns>
+        </member>
+        <member name="M:ATP2016Project.Model.Algorithms.Search.SearchableMaze3D.getAllSuccessors(ATP2016Project.Model.Algorithms.Search.AState)">
+            <summary>
+            Returns a List containing all the possible (valid) successors of a gives AState
+            </summary>
+            <param name="state"></param>
+            <returns> List of successors  </returns>
+        </member>
+        <member name="M:ATP2016Project.Model.Algorithms.Search.SearchableMaze3D.createSolution(ATP2016Project.Model.Algorithms.Search.AState)">
+            <summary>
+            Backtracking a solution from a gives state (Using parent states)
+            </summary>
+            <param name="end"></param>
+            <returns> Solution </returns>
+        </member>
+        <member name="M:ATP2016Project.Model.Algorithms.Search.SearchableMaze3D.print">
+            <summary>
+            Prints the maze
+            </summary>
+        </member>
+        <member name="T:ATP2016Project.Model.Algorithms.Search.Solution">
+            <summary>
+            Represents a Solution for a searchable problem
+            </summary>
+        </member>
+        <member name="M:ATP2016Project.Model.Algorithms.Search.Solution.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:ATP2016Project.Model.Algorithms.Search.Solution.addState(ATP2016Project.Model.Algorithms.Search.AState)">
+            <summary>
+            Adds a state to the Solution
+            </summary>
+            <param name="state"></param>
+        </member>
+        <member name="M:ATP2016Project.Model.Algorithms.Search.Solution.isSolutionExists">
+            <summary>
+            Checks if theres a solution - meaning the list contains AStates
+            </summary>
+            <returns> bool </returns>
+        </member>
+        <member name="M:ATP2016Project.Model.Algorithms.Search.Solution.getSolutionSteps">
+            <summary>
+            Returns the length of the solution - How many steps it takes from Initial to Goal
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ATP2016Project.Model.Algorithms.Search.Solution.getSolutionPath">
+            <summary>
+            Returns the solution path
+            </summary>
+            <returns> List of the AStates involved in the solution </returns>
+        </member>
+        <member name="M:ATP2016Project.Model.Algorithms.Search.Solution.reverese">
+            <summary>
+            Reverses the solution for when the states are inserted from goal to initial
+            </summary>
+        </member>
+        <member name="M:ATP2016Project.Model.Algorithms.Search.Solution.printSolution">
+            <summary>
+            Prints the solution states
+            </summary>
+        </member>
+        <member name="T:ATP2016Project.Model.IModel">
+            <summary>
+            An Interface represents a model
+            </summary>
+        </member>
+        <member name="M:ATP2016Project.Model.IModel.getDir(System.String)">
+            <summary>
+            Returns all folders and files inside the folder given by 'path'
+            </summary>
+            <param name="path">the folder's path</param>
+            <returns>null - in case of a problem (invalid/inaccessible path). array of strings - each string represents a path for a folder or file under 'path'</returns>
+        </member>
+        <member name="M:ATP2016Project.Model.IModel.generate3dMaze(System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Generates a thread that generates a 3d maze
+            </summary>
+            <param name="mazeName">maze name - ID</param>
+            <param name="columns">num of columns in the maze</param>
+            <param name="rows">num of rows in the maze</param>
+            <param name="levels">num of levels in the maze</param>
+        </member>
+        <member name="M:ATP2016Project.Model.IModel.getMaze(System.String)">
+            <summary>
+            Returns the maze 'mazeName' 
+            </summary>
+            <param name="mazeName">maze name</param>
+            <returns>3D array - maze board</returns>
+        </member>
+        <member name="M:ATP2016Project.Model.IModel.saveMaze(System.String,System.String)">
+            <summary>
+            Compress the maze 'mazeName' and save it into a file with a given path
+            </summary>
+            <param name="mazeName">the name of the maze to save</param>
+            <param name="path">file path</param>
+            <returns>true - for success, false for failure</returns>
+        </member>
+        <member name="M:ATP2016Project.Model.IModel.loadMaze(System.String,System.String)">
+            <summary>
+            Loads a compressed maze from the given path ,decompress it and adds it to the dictionary
+            also - if theres a previous existing solution for a maze with the same name - delete it
+            </summary>
+            <param name="path">path of the file to load</param>
+            <param name="mazeName">maze name</param>
+        </member>
+        <member name="M:ATP2016Project.Model.IModel.mazeSize(System.String)">
+            <summary>
+            Calculates the maze size in the memory and returns it by bytes
+            </summary>
+            <param name="mazeName">maze name</param>
+            <returns>maze size in the memory in bytes</returns>
+        </member>
+        <member name="M:ATP2016Project.Model.IModel.fileSize(System.String)">
+            <summary>
+            Returns the file size in bytes
+            </summary>
+            <param name="path">the file path </param>
+            <returns>file size in bytes</returns>
+        </member>
+        <member name="M:ATP2016Project.Model.IModel.solveMaze(System.String,System.String)">
+            <summary>
+            Generates a thread that solves the maze 'mazeName'
+            </summary>
+            <param name="mazeName">maze name</param>
+            <param name="algorithm">algorithm to solve with</param>
+        </member>
+        <member name="M:ATP2016Project.Model.IModel.displaySolution(System.String)">
+            <summary>
+            Returns the solution for maze 'mazeName'
+            </summary>
+            <param name="mazeName">maze name</param>
+            <returns>null - if the solution doesnt exists, else returns the solution </returns>
+        </member>
+        <member name="M:ATP2016Project.Model.IModel.mazeExists(System.String)">
+            <summary>
+            Checks if the maze 'mazeName' exists in the system
+            </summary>
+            <param name="mazeName"> maze name</param>
+            <returns>true if the maze exists, false otherwise</returns>
+        </member>
+        <member name="M:ATP2016Project.Model.IModel.exit">
+            <summary>
+            Wait for all threads to finish and exit 
+            </summary>
+        </member>
+        <member name="T:ATP2016Project.Model.MyModel">
+            <summary>
+            MyModel
+            </summary>
+        </member>
+        <member name="M:ATP2016Project.Model.MyModel.#ctor(ATP2016Project.Controller.IController)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="c">Icontroller</param>
+        </member>
+        <member name="M:ATP2016Project.Model.MyModel.displaySolution(System.String)">
+            <summary>
+            Returns the solution for maze 'mazeName'
+            </summary>
+            <param name="mazeName">maze name</param>
+            <returns>null - if the solution doesnt exists, else returns the solution </returns>
+        </member>
+        <member name="M:ATP2016Project.Model.MyModel.solveMaze(System.String,System.String)">
+            <summary>
+            Generates a thread that solves the maze 'mazeName'
+            </summary>
+            <param name="mazeName">maze name</param>
+            <param name="algorithm">algorithm to solve with</param>
+        </member>
+        <member name="M:ATP2016Project.Model.MyModel.solve(ATP2016Project.Model.Algorithms.Search.ISearchingAlgorithm,System.String)">
+            <summary>
+            Solve the maze 'mazeName' with BFS/DFS algorithm and saves the solution in the dictionary
+            </summary>
+            <param name="searching">Isearching algorithm to solve the maze with</param>
+            <param name="mazeName">maze naze</param>
+        </member>
+        <member name="M:ATP2016Project.Model.MyModel.addMaze(System.String,ATP2016Project.Model.Algorithms.MazeGenerators.Maze3d)">
+            <summary>
+            Add maze 'mazeName' to the dictionary
+            </summary>
+            <param name="mazeName">maze name</param>
+            <param name="maze">Maze3d to save</param>
+        </member>
+        <member name="M:ATP2016Project.Model.MyModel.retrieveMaze(System.String)">
+            <summary>
+            Returns a Maze3d with name 'mazeName' from the dictionary
+            </summary>
+            <param name="mazeName">maze name</param>
+            <returns>Maze3d with name 'mazeName' if exists, else, returns null</returns>
+        </member>
+        <member name="M:ATP2016Project.Model.MyModel.generate3dMaze(System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Generates a thread that generates a 3d maze
+            </summary>
+            <param name="mazeName">maze name - ID</param>
+            <param name="columns">num of columns in the maze</param>
+            <param name="rows">num of rows in the maze</param>
+            <param name="levels">num of levels in the maze</param>
+        </member>
+        <member name="M:ATP2016Project.Model.MyModel.threadGenerateMaze(System.Int32[],System.String)">
+            <summary>
+            Generates a 3d maze and adds it to the dictionary.
+            </summary>
+            <param name="size">array[3] : [0]columns [1] rows [2] levels - as maze dimensions </param>
+            <param name="mazeName">the maze name - maze ID</param>
+        </member>
+        <member name="M:ATP2016Project.Model.MyModel.getMaze(System.String)">
+            <summary>
+            Returns the maze 'mazeName' 
+            </summary>
+            <param name="mazeName">maze name</param>
+            <returns>3D array - maze board</returns>
+        </member>
+        <member name="M:ATP2016Project.Model.MyModel.loadMaze(System.String,System.String)">
+            <summary>
+            Loads a compressed maze from the given path ,decompress it and adds it to the dictionary
+            also - if theres a previous existing solution for a maze with the same name - delete it
+            </summary>
+            <param name="path">path of the file to load</param>
+            <param name="mazeName">maze name</param>
+        </member>
+        <member name="M:ATP2016Project.Model.MyModel.mazeSize(System.String)">
+            <summary>
+            Calculates the maze size in the memory and returns it by bytes
+            </summary>
+            <param name="mazeName">maze name</param>
+            <returns>maze size in the memory in bytes</returns>
+        </member>
+        <member name="M:ATP2016Project.Model.MyModel.saveMaze(System.String,System.String)">
+            <summary>
+            Compress the maze 'mazeName' and save it into a file with a given path
+            </summary>
+            <param name="mazeName">the name of the maze to save</param>
+            <param name="path">file path</param>
+            <returns>true - for success, false for failure</returns>
+        </member>
+        <member name="M:ATP2016Project.Model.MyModel.mazeExists(System.String)">
+            <summary>
+            Checks if the maze 'mazeName' exists in the system
+            </summary>
+            <param name="mazeName"> maze name</param>
+            <returns>true if the maze exists, false otherwise</returns>
+        </member>
+        <member name="M:ATP2016Project.Model.MyModel.getDir(System.String)">
+            <summary>
+            Returns all folders and files inside the folder given by 'path'
+            </summary>
+            <param name="path">the folder's path</param>
+            <returns>null - in case of a problem (invalid/inaccessible path). array of strings - each string represents a path for a folder or file under 'path'</returns>
+        </member>
+        <member name="M:ATP2016Project.Model.MyModel.exit">
+            <summary>
+            Wait for all threads to finish and exit 
+            </summary>
+        </member>
+        <member name="M:ATP2016Project.Model.MyModel.fileSize(System.String)">
+            <summary>
+            Returns the file size in bytes
+            </summary>
+            <param name="path">the file path </param>
+            <returns>file size in bytes</returns>
+        </member>
+        <member name="M:ATP2016Project.Program.testSearchAlgorithms">
+            <summary>
+            generate maze and calls print for both BFS and DFS searching algorithms
+            </summary>
+        </member>
+        <member name="M:ATP2016Project.Program.print(System.String,ATP2016Project.Model.Algorithms.Search.ISearchingAlgorithm,ATP2016Project.Model.Algorithms.Search.ISearchable)">
+            <summary>
+            Prints the test results for either BFS or DFS searching algorithms (defined by args)
+            </summary>
+            <param name="algo"></param>
+            <param name="searching"></param>
+            <param name="maze"></param>
+        </member>
+        <member name="T:ATP2016Project.View.CLI">
+            <summary>
+            Command Line Interface
+            </summary>
+        </member>
+        <member name="M:ATP2016Project.View.CLI.#ctor(ATP2016Project.Controller.IController)">
+            <summary>
+            CLI Constructor
+            </summary>
+            <param name="controller">The controller to be used to connect with the view</param>
+        </member>
+        <member name="M:ATP2016Project.View.CLI.Start">
+            <summary>
+            Starting the CLI
+            </summary>
+        </member>
+        <member name="M:ATP2016Project.View.CLI.printInfo">
+            <summary>
+            Prints initial info about the program
+            </summary>
+        </member>
+        <member name="M:ATP2016Project.View.CLI.run">
+            <summary>
+            CLI running function - takes care of input -> commands
+            </summary>
+        </member>
+        <member name="M:ATP2016Project.View.CLI.errOutput(System.String)">
+            <summary>
+            Error Output function - prints red
+            </summary>
+            <param name="output">string output</param>
+        </member>
+        <member name="M:ATP2016Project.View.CLI.Input">
+            <summary>
+            Input function
+            </summary>
+            <returns>string input</returns>
+        </member>
+        <member name="M:ATP2016Project.View.CLI.Output(System.String,System.Boolean)">
+            <summary>
+            Output function
+            </summary>
+            <param name="output">string output</param>
+            <param name="cursor">bool cursor (print cursor or not - default true)</param>
+        </member>
+        <member name="M:ATP2016Project.View.CLI.setCommands(System.Collections.Generic.Dictionary{System.String,ATP2016Project.Controller.ICommand})">
+            <summary>
+            Setter for m_commands
+            </summary>
+            <param name="commands">Dictionary of commands</param>
+        </member>
+        <member name="M:ATP2016Project.View.CLI.printMaze(System.String,System.Int32[0:,0:,0:])">
+            <summary>
+            PrintMaze
+            </summary>
+            <param name="mazeName">string maze name</param>
+            <param name="maze">int[,,] maze to print</param>
+        </member>
+        <member name="T:ATP2016Project.View.IView">
+            <summary>
+            View Interface - defines the main functions of the view
+            </summary>
+        </member>
+        <member name="M:ATP2016Project.View.IView.Output(System.String,System.Boolean)">
+            <summary>
+            Output function
+            </summary>
+            <param name="output">string output</param>
+            <param name="cursor">bool cursor (print cursor or not - default true)</param>
+        </member>
+        <member name="M:ATP2016Project.View.IView.errOutput(System.String)">
+            <summary>
+            Error Output function - prints red
+            </summary>
+            <param name="output">string output</param>
+        </member>
+        <member name="M:ATP2016Project.View.IView.printMaze(System.String,System.Int32[0:,0:,0:])">
+            <summary>
+            PrintMaze
+            </summary>
+            <param name="mazeName">string maze name</param>
+            <param name="maze">int[,,] maze to print</param>
+        </member>
+        <member name="M:ATP2016Project.View.IView.Start">
+            <summary>
+            Starting the CLI
+            </summary>
+        </member>
+        <member name="M:ATP2016Project.View.IView.setCommands(System.Collections.Generic.Dictionary{System.String,ATP2016Project.Controller.ICommand})">
+            <summary>
+            Setter for m_commands
+            </summary>
+            <param name="commands">Dictionary of commands</param>
+        </member>
+    </members>
+</doc>
